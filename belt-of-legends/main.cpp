@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 
 void generateBeltOfLegend(int beltWidth, char beltOuter, char beltInner);
 
@@ -20,7 +19,6 @@ int main(int argc, char* argv[])
     if(numInput == UINT32_MAX || numInput > 10)
     {
         std::cout << "Invalid Number!" << std::endl;
-        _getch();
         return 0;
     }
 
@@ -36,7 +34,6 @@ int main(int argc, char* argv[])
     // Generate belt of legend
     generateBeltOfLegend(numInput, letterOuter, letterInner);
 
-    _getch();
     return 0;
 }
 
