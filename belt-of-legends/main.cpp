@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+
 #define UINT32_MAX (0xffffffff)
 
 void generateBeltOfLegend(int beltWidth, char beltOuter, char beltInner);
