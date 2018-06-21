@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 
     while(true)
     {
-        system("cls");
+        system("clear");
         std::cout << "###############################" << std::endl;
         std::cout << "Welcome to Belt of Legends!" << std::endl;
         std::cout << "###############################" << std::endl;
