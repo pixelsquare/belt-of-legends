@@ -9,31 +9,50 @@ int main(int argc, char* argv[])
     char letterOuter;
     unsigned int numInput = 0;
 
-    std::cout << "###############################" << std::endl;
-    std::cout << "Welcome to Belt of Legends!" << std::endl;
-    std::cout << "###############################" << std::endl;
-    std::cout << std::endl;
-
-    std::cout << "Please enter a number (1 to 10)" << std::endl;
-    std::cin >> numInput;
-
-    if(numInput == UINT32_MAX || numInput > 10)
+    while(true)
     {
-        std::cout << "Invalid Number!" << std::endl;
-        return 0;
+        system("cls");
+        std::cout << "###############################" << std::endl;
+        std::cout << "Welcome to Belt of Legends!" << std::endl;
+        std::cout << "###############################" << std::endl;
+        std::cout << std::endl;
+
+        std::cout << "Please enter a number (1 to 10)" << std::endl;
+        std::cin >> numInput;
+
+        if (numInput == UINT32_MAX || numInput > 10)
+        {
+            std::cout << "Invalid Number!" << std::endl;
+            return 0;
+        }
+
+        std::cout << "Please enter first letter" << std::endl;
+        std::cin >> letterOuter;
+
+        std::cout << "Please enter second letter" << std::endl;
+        std::cin >> letterInner;
+
+        std::cout << std::endl;
+        std::cout << std::endl;
+
+        // Generate belt of legend
+        generateBeltOfLegend(numInput, letterOuter, letterInner);
+
+        char willContinueKey = ' ';
+
+        do
+        {
+            std::cout << std::endl;
+            std::cout << "Do you want to try again? (y/n)" << std::endl;
+            std::cin >> willContinueKey;
+        } 
+        while (willContinueKey != 'y' && willContinueKey != 'n');
+
+        if (willContinueKey == 'n')
+        {
+            break;
+        }
     }
-
-    std::cout << "Please enter first letter" << std::endl;
-    std::cin >> letterOuter;
-
-    std::cout << "Please enter second letter" << std::endl;
-    std::cin >> letterInner;
-    
-    std::cout << std::endl;
-    std::cout << std::endl;
-
-    // Generate belt of legend
-    generateBeltOfLegend(numInput, letterOuter, letterInner);
 
     return 0;
 }
