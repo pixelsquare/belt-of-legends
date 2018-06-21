@@ -14,6 +14,7 @@ int main(int argc, char* argv[])
     while(true)
     {
         system("clear");
+		
         std::cout << "###############################" << std::endl;
         std::cout << "Welcome to Belt of Legends!" << std::endl;
         std::cout << "###############################" << std::endl;
@@ -55,6 +56,9 @@ int main(int argc, char* argv[])
             break;
         }
     }
+	
+    std::cout << std::endl;
+    std::cout << "Thanks for playing!" << std::endl;
 
     return 0;
 }
