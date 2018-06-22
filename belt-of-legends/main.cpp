@@ -13,7 +13,11 @@ int main(int argc, char* argv[])
 
     while(true)
     {
+#if _WIN32
+        system("cls");
+#else
         system("clear");
+#endif
 		
         std::cout << "###############################" << std::endl;
         std::cout << "Welcome to Belt of Legends!" << std::endl;
